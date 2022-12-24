@@ -24,6 +24,8 @@
 // // console.log(person2);
 
 // // console.log(person1);
+// hasOwnProperty 判断是否有属性key
+// ({}).hasOwnProperty.call(obj, key)
 
 // // /* 浅拷贝 */
 // // function clone(origin, target) {
@@ -44,13 +46,20 @@
 // var person3 = JSON.parse(JSON.stringify(person1));
 // console.log(person3);
 
+
+// 传递参数 origin target
+// 1. 定义变量 默认是空对象
+// 2. for (var key in origin){}循环
+// 3. 判断
+
 // function deepClone(origin, target) {
 //   var tar = target || {};
 //   for(var key in origin) {
 //     if (origin.hasOwnProperty(key)) {
 //       if (typeof (origin[key]) == 'object' && origin[key] !== null) {
+          // [object Array]
 //         if (Object.prototype.toString.call(origin[key]).slice(8, -1) == 'Array') {
-//           tar[key] = [];
+//           tar[key] = []; 
 //         } else {
 //           tar[key] = {};
 //         }
